@@ -70,3 +70,34 @@
   </div>
 </div>
 <!-- END: Content-->
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.dataex-html5-selectors').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+          {
+              extend: 'excelHtml5',
+              exportOptions: {
+                  columns: ':visible'
+              }
+          },
+          {
+              extend: 'csvHtml5',
+              exportOptions: {
+                  columns: ':visible'
+              }
+          },
+          {
+                extend: 'pdfHtml5',
+                download:'open',
+                exportOptions: {
+                    columns: ':visible'
+                }
+          },
+          'colvis',
+        ]
+    } );
+    $('.pagination').addClass('pull-right')
+} );
+</script>
