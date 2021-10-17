@@ -111,7 +111,7 @@
   function BtPrint1(data) {
     var printWindow = window.open('', '', 'height=400,width=800');
     printWindow.document.write('<html><head><title>CETAK TRANSAKSI</title>');
-    printWindow.document.write('<style>@media print{@page{size: 80mm auto} #pre_print {width: 80mm;font-size: 15px;}}</style></head><body>');
+    printWindow.document.write('<style>@media print{@page{size: 57mm auto} #pre_print {width: 57mm;font-size: 15px;}}</style></head><body>');
     printWindow.document.write(data);
     printWindow.document.write('</body></html>');
     printWindow.document.close();
@@ -138,13 +138,12 @@
   }
 </script> -->
 <div id="pre_print" class="hidden">
-<img src="<?php echo base_url('assets/logo.png')?>">
+<img src="<?php echo base_url('assets/logo1.png')?>">
 <br>
-SPBU 
+<div style="color:grey">
+SPBU 15.214.521
 <div style="font-size:11px;">
-Jl.<br>
-Alamat<br>
-No Telp<br>
+Jl.Pulo Padang - Sipare Pare Tengah Merbau<br>
 <?php echo tgl_indo($transaksi[0]->tanggal_transaksi); ?> <?php echo substr($transaksi[0]->tanggal_transaksi,10)?><br>
 </div>
 ==========================<br>
@@ -160,7 +159,7 @@ Tunai &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 
 Kembalian &nbsp;&nbsp;&nbsp;&nbsp;: Rp.0<br><br>
 Selamat Jalan Dan Terima Kasih
 </div>
-
+</div>
 </div>
 
 
